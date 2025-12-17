@@ -16,11 +16,11 @@ class AppPages {
       page: () =>  LoginView(),
       binding: LoginBinding(),
     ),
-     GetPage(
-      name: AppRoutes.dashboard,
-      page: () =>  DashboardView(),
-      binding: DashboardBinding(),
-    ),
+    //  GetPage(
+    //   name: AppRoutes.dashboard,
+    //   page: () =>  DashboardView(),
+    //   binding: DashboardBinding(),
+    // ),
      GetPage(
       name: AppRoutes.DETAILS,
       page: () =>  DetailsView(),
