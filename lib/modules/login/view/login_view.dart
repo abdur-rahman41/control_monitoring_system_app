@@ -25,7 +25,7 @@ class LoginView extends GetView<LoginViewModel>{
             child:
           Column(
             children: [
-              SizedBox(height: 72,),
+              SizedBox(height: 82,),
               Image.asset("assets/images/scube.png"),
               SizedBox(height: 20,),
               Text("SCUBE",style: AppTextStyle.semiboldFontStyle,),
@@ -35,26 +35,53 @@ class LoginView extends GetView<LoginViewModel>{
           ),),
 
           Expanded(child:  Container(
+            
             decoration: BoxDecoration(
-                color: Colors.white
+                color: Colors.white,
+              borderRadius: BorderRadius.circular(20)
             ),
             child: Column(
               children: [
                 SizedBox(height: 32,),
                 Text("Login",style:AppTextStyle.boldFontStyle ,),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16,vertical: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 16,vertical: 7),
                   child: CommonInputField.inputField(controller: controller.userController, hint: 'Username'),),
                 Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16,vertical: 8),
-                    child:  CommonInputField.inputField(controller: controller.passwordController, hint: 'password')),
+                    padding: EdgeInsets.symmetric(horizontal: 16,vertical: 7),
+                    child:  CommonInputField.inputField(controller: controller.passwordController, hint: 'Password')),
                 Container(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 14, 0),
                   alignment: Alignment.centerRight,
-                  child: Text("Forgot password"),),
-                GlobalButton.simpleBtn(text: "Login", onTap: (){
-                  Get.offAndToNamed(AppRoutes.DETAILS);
-                },background: AppColors.primaryColor),
-                Text("Don’t have any account? Register Now")
+                  child: Text(
+                    "Forgot password?",
+                    style: AppTextStyle.regularFontStyle.copyWith(
+                      fontWeight: FontWeight.w500,
+                      decoration: TextDecoration.underline,
+                      decorationThickness: 0.8, // optional
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: 20,),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child:  GlobalButton.simpleBtn(text: "Login", borderRadius:10 ,onTap: (){
+                  Get.offAndToNamed(AppRoutes.DASHBOARD);
+                },background: AppColors.primaryColor),),
+                SizedBox(height: 8,),
+                Container(
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Don’t have any account? ",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14,color: Color(0xff5E5E5E)),),
+                      Text("Register Now",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 14,color: AppColors.primaryColor),)
+                  ],
+                  ),
+                ),
+
+
 
 
 

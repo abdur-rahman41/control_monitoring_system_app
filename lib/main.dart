@@ -1,3 +1,4 @@
+import 'package:control_monitoring_system_app/modules/dashboard/view/dashboard_view.dart';
 import 'package:control_monitoring_system_app/modules/login/view/login_view.dart';
 import 'package:control_monitoring_system_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LoginView(),
+      home: DashboardView(),
     );
   }
 }

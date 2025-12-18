@@ -24,19 +24,20 @@ class CommonInputField {
         ),
         decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(10),
             border: Border.all(
-              color: AppColors.onSurfaceColor.withOpacity(.1),
+              color: Color(0xffB9C6D6),
               width: 1,
             ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.shade300,
-                blurRadius: 2,
-                spreadRadius: 1,
-                offset: Offset(0, 3),
-              )
-            ]),
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.grey.shade300,
+            //     blurRadius: 2,
+            //     spreadRadius: 1,
+            //     offset: Offset(0, 3),
+            //   )
+            // ]
+        ),
         child: Row(
           children: [
             Expanded(
@@ -52,7 +53,9 @@ class CommonInputField {
                   border: InputBorder.none,
                   hintText: hint,
                   hintStyle: TextStyle(
-                    color: AppColors.onSurfaceColor.withOpacity(.4),
+                    color: Color(0xff5E5E5E),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400
                   ),
                   // contentPadding: EdgeInsets.only(bottom: 8),
                 ),
